@@ -22,7 +22,7 @@ src: url('fonts/fira/eot/FiraSans-Regular.eot'),
 body,html{
   color: antiquewhite;
   font-family: "Pokemon", sans-serif;
-  background-image: url('./img/pokemon.jpg');
+  background-image: url('/assets/img/pokemon.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
