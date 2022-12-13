@@ -2,7 +2,7 @@
 src: url('fonts/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
 src: url('fonts/fira/eot/FiraSans-Regular.eot'),
 */
-
+/* 
 @font-face {
   font-family: "Pokemon";
   src: 
@@ -10,7 +10,7 @@ src: url('fonts/fira/eot/FiraSans-Regular.eot'),
        url('font/pokemon_woff/Pokemon_Solid.woff') format('woff'),
        url('font/pokemon_ttf/Pokemon_Hollow.ttf') format('ttf'),
        url('font/pokemon_ttf/Pokemon_Solid.ttf') format('ttf');
-}
+} */
 
 *{
   padding: 0;
