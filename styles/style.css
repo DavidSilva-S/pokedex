@@ -92,8 +92,10 @@ html {
   height: 100px;
   border-radius: 50%;
   background-color: rgb(22, 104, 158);
-  border: 10px solid rgb(223, 220, 221);
+  border: 10px solid hsl(0, 4.2%, 67.6%);
   transition: all 1s ease-in-out;
+    box-shadow: rgb(28, 26, 26) 4px 4px 1px;
+
 }
 
 .header-circle-red {
@@ -131,8 +133,9 @@ html {
   max-width: 300px;
   height: 100%;
   padding: 0px 20px;
-  background-color: hsl(0, 0%, 87%);
+  background-color: hsl(0, 4.2%, 67.6%);
   border-radius: 10px;
+  box-shadow: 4px 4px 1px 1px #00312b;
 }
 
 .pokedex-screen-header-container {
@@ -153,7 +156,7 @@ html {
 .podekex-screen-in {
   height: 170px;
   width: 100%;
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(174, 162, 162);
   border-radius: 4px;
   /* overflow-x: scroll;
   text-overflow: ellipsis;
@@ -164,7 +167,7 @@ html {
   position: relative;
 }
 
-.pokedex-svg {
+.pokemon-svg {
   position: absolute;
   width: 80px;
   top: 5rem;
@@ -174,6 +177,7 @@ html {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   transition: 2s all ease;
+  cursor: pointer;
 }
 
 @keyframes shakePoke {
@@ -280,7 +284,7 @@ html {
   background-color: rgb(12, 96, 138);
 }
 
-.screen {
+.screen-name-pokemon {
   display: flex;
   align-items: center;
   justify-content: center;
