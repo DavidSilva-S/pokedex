@@ -3,44 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon(1).ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon(1).ico" type="image/x-icon" />
     <title>Pokedex</title>
   </head>
   <body>
-    
     <!-- <header class="header">
       <h1 class="title">Pokedex</h1>
     </header> -->
-    
+
     <div class="container">
       <div class="pokedex">
-
         <div class="pokedex-header-lights">
-
           <div class="header-circle-blue header-circles"></div>
 
           <div class="container-small-circles">
-            <div class="header-circle-red header-circles"></div>
-            <div class="header-circle-yellow header-circles"></div>
-            <div class="header-circle-green header-circles"></div>
+            <div class="header-circle-red header-circles circle"></div>
+            <div class="header-circle-yellow header-circles circle"></div>
+            <div class="header-circle-green header-circles circle"></div>
           </div>
-
         </div>
 
         <div class="pokedex-screen-container">
-
           <div class="pokedex-screen-container-2">
-            
             <div class="pokedex-screen-header-container">
               <div class="pokedex-screen-header-circles"></div>
               <div class="pokedex-screen-header-circles"></div>
             </div>
 
-            <div class="podekex-screen-in"></div>
+            <div class="podekex-screen-in">
+              <img
+                class="pokedex-svg"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                alt=""
+                srcset=""
+              />
+              <div class="pokedex-screen-background"></div>
+            </div>
 
             <div class="podekex-screen-footer">
-
               <div class="pokedex-screen-footer-circle"></div>
 
               <div class="pokedex-footer-bars-container">
@@ -48,11 +49,8 @@
                 <div class="bars"></div>
                 <div class="bars"></div>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <div class="pokedex-container-buttons">
@@ -62,23 +60,20 @@
               <div class="start"></div>
               <div class="select"></div>
             </div>
-            <div class="screen"></div>
+            <div class="screen">
+              <span>Bulbassaur</span>
+            </div>
           </div>
           <div class="joy-pad">
-          
-              <div class="arrow-left arrow"></div>
-              <div class="arrow-right arrow"></div>
-              <div class="arrow-up arrow"></div>
-              <div class="arrow-down arrow"></div>
-          
+            <div class="arrow-left arrow"></div>
+            <div class="arrow-right arrow"></div>
+            <div class="arrow-up arrow"></div>
+            <div class="arrow-down arrow"></div>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <script type="module" src="/main.js"></script>
-
   </body>
 </html>
