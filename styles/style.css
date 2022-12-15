@@ -93,9 +93,8 @@ html {
   border-radius: 50%;
   background-color: rgb(22, 104, 158);
   border: 10px solid hsl(0, 4.2%, 67.6%);
-  transition: all 1s ease-in-out;
-    box-shadow: rgb(28, 26, 26) 4px 4px 1px;
-
+  transition: background-color 1s ease-in-out;
+  box-shadow: rgb(28, 26, 26) 4px 4px 1px;
 }
 
 .header-circle-red {
@@ -169,18 +168,17 @@ html {
 
 .pokemon-svg {
   position: absolute;
-  width: 80px;
-  top: 5rem;
-  left: 5rem;
-  animation-name: shakePoke;
+  top: 2rem;
+  left: 7rem;
+  /* animation-name: shakePoke;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  transition: 2s all ease;
+  transition: 2s all ease; */
   cursor: pointer;
 }
 
-@keyframes shakePoke {
+/* @keyframes shakePoke {
   0%,30%,50%,70%,90%{
     transform: rotate(-4deg);
     transform: translateX(-10px);
@@ -193,7 +191,7 @@ html {
     transform: rotate(0deg);
     transform: translateX(-10px);
   }
-}
+} */
 
 .pokedex-screen-background {
   background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/deoyv4s-a4ee39df-e7ae-4190-86be-dfaf077a01b6.jpg/v1/fill/w_1191,h_671,q_70,strp/rock_background_by_willdinomaster55_deoyv4s-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODk5IiwicGF0aCI6IlwvZlwvODBmZjUyM2YtZmY4NC00NTdkLWE1NDctNDY0NTg4ZDNhM2QzXC9kZW95djRzLWE0ZWUzOWRmLWU3YWUtNDE5MC04NmJlLWRmYWYwNzdhMDFiNi5qcGciLCJ3aWR0aCI6Ijw9MTU5NSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.M3vFYYVZqyhoSf8ZkWuKpkbyLKU2-iItGHgzyAjebK8);
@@ -313,23 +311,11 @@ html {
   /* position: absolute; */
 }
 
-.arrow:nth-child(1):hover {
-  background-color: rgb(0, 49, 44);
-  opacity: 0.8;
-}
-.arrow:nth-child(2):hover {
+.arrow:hover {
   background-color: rgb(0, 49, 44);
   opacity: 0.8;
 }
 
-.arrow:nth-child(3):hover {
-  background-color: rgb(0, 49, 44);
-  opacity: 0.8;
-}
-.arrow:nth-child(4):hover {
-  background-color: rgb(0, 49, 44);
-  opacity: 0.8;
-}
 
 .arrow:nth-child(1) {
   background-color: rgb(0, 49, 43);

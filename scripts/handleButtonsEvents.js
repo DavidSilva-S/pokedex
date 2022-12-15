@@ -9,21 +9,21 @@ const arrowDown = document.querySelector(".arrow-down");
 const buttonGetPokemons = document.querySelector(
     ".pokedex-container-bottom-green"
   );
-let id = 0
+let id = 1
 
 buttonGetPokemons.addEventListener("click", () => {
-  fetchPokemonsById('2').then((pokemons) => { 
+  fetchPokemonsById('1').then((pokemons) => { 
   let {name, sprites} = pokemons
-  handleUpdateDisplay(name, sprites.other['official-artwork'].front_default)
+  console.log(name, sprites.versions["generation-v"]["black-white"].animated.front_default);
 })});
 
 
 arrowLeft?.addEventListener("click", () => {
-  if(id === 0) return;
+  if(id === 1) return;
   id--;
   fetchPokemonsById(id).then((pokemons) => { 
     let {name, sprites} = pokemons
-    handleUpdateDisplay(name, sprites.other['official-artwork'].front_default)
+    handleUpdateDisplay(name,  sprites.versions["generation-v"]["black-white"].animated.front_default)
   })
 })
 
@@ -32,6 +32,6 @@ arrowRight?.addEventListener("click", () => {
   id++;  
   fetchPokemonsById(id).then((pokemons) => { 
     let {name, sprites} = pokemons
-    handleUpdateDisplay(name, sprites.other['official-artwork'].front_default)
+    handleUpdateDisplay(name,  sprites.versions["generation-v"]["black-white"].animated.front_default)
   })
 })

@@ -1,0 +1,5 @@
+https://pokeapi.co/api/v2/pokemon/800/
+
+caminho para os sprites animados
+
+
