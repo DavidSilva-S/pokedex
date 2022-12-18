@@ -1,5 +1,15 @@
 const url = "https://pokeapi.co/api/v2/pokemon/";
 
+const getPokemonByItsname = async (name) => {
+  try {
+    const response = await fetch(url + name)
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    alert("Not Found!")
+    console.error(error)
+  }
+}
 
 const fetchPokemonsAll = async _ => {
 
@@ -25,6 +35,7 @@ const fetchPokemonsById = async (id) => {
 
 export {
   fetchPokemonsById,
-  fetchPokemonsAll
+  fetchPokemonsAll,
+  getPokemonByItsname
 }
 

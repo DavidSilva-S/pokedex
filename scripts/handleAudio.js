@@ -1,6 +1,6 @@
 const pokemonSvg = document.querySelector(".pokemon-svg")
 
-window.onload = playMusic
+// window.onload = playMusic
 
 function playMusic(params) {
     const audio = new Audio("../audio/ILikeNiggas.mp3")
