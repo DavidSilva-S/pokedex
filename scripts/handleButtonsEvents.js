@@ -1,4 +1,4 @@
-import { fetchPokemonsAll, fetchPokemonsById } from "./handleFetchPokemons";
+import { fetchPokemonsAll, fetchPokemonsById, getPokemonByItsname } from "./handleFetchPokemons";
 import handleUpdateDisplay from "./handleUpdateDisplay.js";
 
 const pokeGotFromApi = [];
@@ -9,7 +9,19 @@ const arrowDown = document.querySelector(".arrow-down");
 const buttonGetPokemons = document.querySelector(
   ".pokedex-container-bottom-green"
 );
+
+const inputUser = document.querySelector('.search-pokemon')
+const buttonSearchPokemon = document.querySelector('.btn-search')
+
 let id = 1;
+
+buttonSearchPokemon.addEventListener("click", () => {
+  getPokemonByItsname(inputUser.value)
+  .then(pokemon => 
+    handleUpdateDisplay(pokemon.name,pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default)
+  )
+})
+
 
 buttonGetPokemons.addEventListener("click", () => {
   fetchPokemonsById("1").then((pokemons) => {
@@ -46,7 +58,7 @@ window.addEventListener("keyup", ({ key }) => {
       });
     }
   }
-  
+
   return;
 });
 
