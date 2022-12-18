@@ -2,10 +2,16 @@ const pokemonSvg = document.querySelector(".pokemon-svg")
 
 window.onload = playMusic
 
-function playMusic(params) {
+async function playMusic() {
     const audio = new Audio("../audio/ILikeNiggas.mp3")
-    audio.loop = true
-    audio.play()
+    audio.loop = true2
+    try {
+        await audio.play()
+        console.log("playin audio")
+    } catch (error) {
+        console.error("error => " + error)
+    }
+    
 }
 
 pokemonSvg.addEventListener("click", () => {
