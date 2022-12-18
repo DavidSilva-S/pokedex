@@ -57,7 +57,7 @@ html {
 
 .pokedex {
   min-width: 400px;
-  min-height: 80vh;
+  min-height: 400px;
   background-color: hwb(350 4% 14%);
   border-radius: 20px;
   box-shadow: 8px 8px 0px -1px #00312b;
