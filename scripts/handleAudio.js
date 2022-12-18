@@ -3,8 +3,8 @@ const pokemonSvg = document.querySelector(".pokemon-svg")
 window.onload = playMusic
 
 async function playMusic() {
-    const audio = new Audio("../audio/ILikeNiggas.mp3")
-    audio.loop = true2
+    const audio = new Audio("../audio/thememusic.mp3")
+    audio.loop = true
     try {
         await audio.play()
         console.log("playin audio")
