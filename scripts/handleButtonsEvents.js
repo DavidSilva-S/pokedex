@@ -5,8 +5,18 @@ const arrowLeft = document.querySelector(".arrow-left")
 const arrowRight = document.querySelector(".arrow-right");
 const inputUser = document.querySelector('.search-pokemon')
 const buttonSearchPokemon = document.querySelector('.btn-search')
+const menuHamburguer = document.querySelector('.pokedex-footer-bars-container')
+const sidePokedex = document.querySelector('.side-pokedex')
 let idPokemon = 1;
+let toggle = false
 
+menuHamburguer.addEventListener('click', () => {
+  console.log(toggle);
+  toggle = !toggle
+  sidePokedex.style.transform =  toggle ? "translateX(1500px)" : "translateX(0px)"
+  sidePokedex.style.transition = "all 1s ease-in-out"
+  // sidePokedex.style.opacity = toggle? "1" : "0"
+})
 
 window.addEventListener("keyup", async(e) => {
   if (e.key !== 'Enter') return; 

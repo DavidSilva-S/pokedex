@@ -228,11 +228,12 @@ html {
 }
 
 .bars {
-  width: 10px;
-  height: 2px;
+  width: 24px;
+  height: 3px;
   background-color: rgb(35, 35, 35);
   border: rgb(49, 6, 2);
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .pokedex-container-buttons {
@@ -355,6 +356,7 @@ html {
   background-color: #db0a2d;
   border-radius: 0px 10px 10px 0px;
   box-shadow: 4px 4px 0px -1px #00312b;
+  transition: translate 2s ease-in;
 }
 
 .side-pokedex-screen {
