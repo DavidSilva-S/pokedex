@@ -1,87 +1,93 @@
-import { fetchPokemonsAll, fetchPokemonsById, getPokemonByItsname } from "./handleFetchPokemons";
+import { getPokemonById, getPokemonByItsName } from "./handleFetchPokemons";
 import handleUpdateDisplay from "./handleUpdateDisplay.js";
 
-const pokeGotFromApi = [];
-const arrowLeft = document.querySelector(".arrow-left");
-const arrowUp = document.querySelector(".arrow-up");
+const arrowLeft = document.querySelector(".arrow-left")
 const arrowRight = document.querySelector(".arrow-right");
-const arrowDown = document.querySelector(".arrow-down");
-const buttonGetPokemons = document.querySelector(
-  ".pokedex-container-bottom-green"
-);
-
 const inputUser = document.querySelector('.search-pokemon')
 const buttonSearchPokemon = document.querySelector('.btn-search')
+let idPokemon = 1;
 
-let id = 1;
 
-buttonSearchPokemon.addEventListener("click", () => {
-  getPokemonByItsname(inputUser.value)
-  .then(pokemon => 
-    handleUpdateDisplay(pokemon.name,pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default)
-  )
+window.addEventListener("keyup", async(e) => {
+  if (e.key !== 'Enter') return; 
+  searchPokemonByItsName(inputUser.value)
 })
 
+buttonSearchPokemon.addEventListener("click", () => {
+  searchPokemonByItsName(inputUser.value)
+})
 
-buttonGetPokemons.addEventListener("click", () => {
-  fetchPokemonsById("1").then((pokemons) => {
-    let { name, sprites } = pokemons;
-    console.log(
-      name,
-      sprites.versions["generation-v"]["black-white"].animated.front_default
-    );
-  });
-});
-
-window.addEventListener("keyup", ({ key }) => {
+window.addEventListener("keyup", async ({ key }) => {
   if (key == "ArrowLeft" || key == "ArrowRight") {
     if (key === "ArrowRight") {
-      if (id >= 905) return alert("The limit of pokemon reached!");
-      id++;
-      fetchPokemonsById(id).then((pokemons) => {
-        let { name, sprites } = pokemons;
-        handleUpdateDisplay(
-          name,
-          sprites.versions["generation-v"]["black-white"].animated.front_default
-        );
-      });
+      searchArrowRight()
     }
     if (key === "ArrowLeft") {
-      if (id === 1) return;
-      id--;
-      fetchPokemonsById(id).then((pokemons) => {
-        let { name, sprites } = pokemons;
-        handleUpdateDisplay(
-          name,
-          sprites.versions["generation-v"]["black-white"].animated.front_default
-        );
-      });
+      searchArrowLeft()
     }
   }
 
   return;
 });
 
-arrowLeft.addEventListener("click", () => {
-  if (id === 1) return;
-  id--;
-  fetchPokemonsById(id).then((pokemons) => {
-    let { name, sprites } = pokemons;
-    handleUpdateDisplay(
-      name,
-      sprites.versions["generation-v"]["black-white"].animated.front_default
-    );
-  });
+arrowLeft.addEventListener("click", async () => {
+  searchArrowLeft()
 });
 
-arrowRight.addEventListener("click", () => {
-  if (id >= 905) return alert("The limit of pokemon reached!");
-  id++;
-  fetchPokemonsById(id).then((pokemons) => {
-    let { name, sprites } = pokemons;
-    handleUpdateDisplay(
-      name,
-      sprites.versions["generation-v"]["black-white"].animated.front_default
-    );
-  });
+arrowRight.addEventListener("click", async() => {
+  searchArrowRight()
 });
+
+async function searchPokemonByItsName(inputUser) {
+  const { id, name, sprites, stats } = await getPokemonByItsName(inputUser)
+  const infoPokemon = {
+    id,
+    name,
+    sprite: sprites.versions["generation-v"]["black-white"].animated.front_default,
+    status: {
+      atk: stats[1].base_stat,
+      def: stats[2].base_stat,
+      hp: stats[0].base_stat,
+      speed: stats[5].base_stat,
+    }
+  }
+
+  handleUpdateDisplay(infoPokemon.sprite, infoPokemon.name, infoPokemon.status) 
+}
+
+async function searchArrowLeft() {
+  if (idPokemon === 1) return;
+  idPokemon--;
+
+  const { id, name, sprites, stats } = await getPokemonById(idPokemon)
+      const infoPokemon = {
+        id,
+        name,
+        sprite: sprites.versions["generation-v"]["black-white"].animated.front_default,
+        status: {
+          atk: stats[1].base_stat,
+          def: stats[2].base_stat,
+          hp: stats[0].base_stat,
+          speed: stats[5].base_stat,
+        }
+      }
+      handleUpdateDisplay(infoPokemon.sprite, infoPokemon.name, infoPokemon.status)  
+}
+
+async function searchArrowRight() {
+  if (idPokemon >= 905) return alert("The limit of pokemon reached!");
+  idPokemon ++;
+  const { id, name, sprites, stats } = await getPokemonById(idPokemon)
+      const infoPokemon = {
+        id,
+        name,
+        sprite: sprites.versions["generation-v"]["black-white"].animated.front_default,
+        status: {
+          atk: stats[1].base_stat,
+          def: stats[2].base_stat,
+          hp: stats[0].base_stat,
+          speed: stats[5].base_stat,
+        }
+      }
+      handleUpdateDisplay(infoPokemon.sprite, infoPokemon.name, infoPokemon.status)
+}
