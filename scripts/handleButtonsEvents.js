@@ -14,6 +14,7 @@ window.addEventListener("keyup", async(e) => {
 })
 
 buttonSearchPokemon.addEventListener("click", () => {
+  console.log(buttonSearchPokemon);
   searchPokemonByItsName(inputUser.value)
 })
 
