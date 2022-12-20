@@ -51,14 +51,15 @@
         src="http://play.pokemonshowdown.com/sprites/ani/entei.gif"
       />
     </div>
-
     <audio src="http://play.pokemonshowdown.com/audio/xy-rival.ogg"></audio>
     <script>
 
         window.onload = playSongBattle
-
+        
         function playSongBattle() {
-          document.querySelector('audio').play();
+          let audio  = document.querySelector('audio');
+          audio.loop = true;
+          audio.play();
         }
 
     </script>
