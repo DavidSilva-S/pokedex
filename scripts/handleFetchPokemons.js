@@ -17,7 +17,7 @@ const getPokemonById = async (id) => {
     const json = await response.json();
     return json;
   } catch (error) {
-    console.error("Failure fetching: " + error);
+    return console.error("Failure fetching: " + error);
   }
 };
 

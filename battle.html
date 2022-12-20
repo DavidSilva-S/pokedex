@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url("https://external-preview.redd.it/cg_ju02UlKyda-ENznEcleC1-keyThJWzU5YlLg3Ycc.png?format=pjpg&auto=webp&s=1e4ce36c016a04b2c08111063d33005e858864ab");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      img {
+        position: absolute;
+      }
+
+      .first-pokemon {
+        bottom: 20vh;
+        left: 20vw;
+      }
+      .second-pokemon {
+        right: 20%;
+        top: 40%;
+      }
+    </style>
+    <title>Battle Field Pokemon</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="first-pokemon"
+        src="http://play.pokemonshowdown.com/sprites/ani-back/absol-mega.gif"
+      />
+      <img
+        class="second-pokemon"
+        src="http://play.pokemonshowdown.com/sprites/ani/entei.gif"
+      />
+    </div>
+
+    <audio src="http://play.pokemonshowdown.com/audio/xy-rival.ogg"></audio>
+    <script>
+
+        window.onload = playSongBattle
+
+        function playSongBattle() {
+          document.querySelector('audio').play();
+        }
+
+    </script>
+  </body>
+</html>

@@ -347,6 +347,7 @@ html {
 }
 
 .side-pokedex {
+  /* display: none; */
   width: 300px;
   height: 500px;
   margin-left: 2px;
@@ -422,10 +423,7 @@ color: #fff2f2;
   border-radius: 4px;
 }
 
-.btn-search {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.btn-search, .btn-battle {
   background-color: #0b405b;
   color: #f7fbfa;
   border: none;
