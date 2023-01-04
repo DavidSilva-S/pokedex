@@ -39,7 +39,7 @@ window.addEventListener("keyup", async ({ key }) => {
 
 btnBattle.addEventListener('click', async () => {
 
-  window.location.href ="http://localhost:5173/battle.html"
+  window.location.href ="https://pokedex-beta-drab.vercel.app//battle.html"
 
   // const { id, name, sprites, stats, weight, height } = await getPokemonById(idPokemon)
 
