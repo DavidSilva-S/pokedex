@@ -25,7 +25,7 @@
 - [TODO](./TODO.md)
 
 ## Live Preview
-Project Link: pokedex-beta-drab.vercel.app
+Project Link: https://pokedex-beta-drab.vercel.app/
 
 <img src="./assets/img/screenshots/project_screenshot.png" width="100%" height="auto" alt="image_project" />
 
