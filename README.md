@@ -25,7 +25,7 @@
 - [TODO](./TODO.md)
 
 ## Live Preview
-Project Link: https://pokedex-otfhowb2s-davidsilvatrabalho.vercel.app
+Project Link: pokedex-beta-drab.vercel.app
 
 <img src="./assets/img/screenshots/project_screenshot.png" width="100%" height="auto" alt="image_project" />
 
